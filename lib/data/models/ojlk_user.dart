@@ -96,7 +96,9 @@ class OJLKUser {
       affiliation: map['affiliation'] ?? '',
       password: map['password'] ?? '',
       employed: map['employed'] ?? false,
-      connections: List<String>.from(map['connections']),
+      connections: map['connections'] != null
+          ? List<String>.from(map['connections'])
+          : [],
     );
   }
 

@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:http_parser/http_parser.dart';
 
 import 'package:http/http.dart' as http;
@@ -208,7 +209,7 @@ class Repository {
       final res = await http.get(
         Uri.parse(DataProvider.allCitizens),
       );
-
+      log(res.body);
       if (res.statusCode == 200) {
         return HttpListConverter.parseAllUsers(res.body, uid);
       } else {
@@ -264,6 +265,7 @@ class Repository {
           DataProvider.getOrganizationUrl(userId: userId),
         ),
       );
+      log(res.body);
       if (res.statusCode == 200) {
         return HRM.fromJson(res.body);
       }
