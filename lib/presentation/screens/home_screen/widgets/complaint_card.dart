@@ -79,7 +79,7 @@ class ComplaintCard extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              "Berue Office",
+                              "beuro Office",
                               style: AppTextStyles.h4Primary,
                             ),
                             SizedBox(
